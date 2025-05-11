@@ -1,79 +1,59 @@
-☕ SipsandSupport
-SipsandSupport is a modern full-stack web application that enables creators, artists, and developers to receive financial support from their audience in the form of “sips” (like buying a coffee). Inspired by platforms like Buy Me a Coffee and Patreon, it allows creators to build public support pages, manage income, and securely accept payments using Razorpay.
+# ☕ SipsandSupport
 
-Built with Next.js, NextAuth.js, MongoDB, and Razorpay, it offers secure login, fast performance, and a personalized experience for both supporters and creators.
+SipsandSupport is a modern full-stack web application that empowers creators, developers, and artists to receive support from their audience in the form of "sips" — a metaphor for buying them a coffee or showing appreciation. Inspired by platforms like **Buy Me a Coffee** and **Patreon**, it provides an intuitive way to fund creative work through one-time payments.
 
-✨ Features
-🔐 Authentication
-Secure user authentication via NextAuth.js
+This project is built using **Next.js**, **NextAuth.js**, **MongoDB**, and **Razorpay**, providing secure user authentication, a custom dashboard, and real-time Razorpay payment handling for creators to monetize their passion with full control over the process.
 
-Supports email/password and OAuth (if enabled)
+---
 
-Sessions stored in MongoDB for scalability and persistence
+## ✨ Features
 
-💼 Creator Dashboard
-Set up your public creator page with name, image, bio, social links, and custom message
+### 🔐 Authentication
+- Fully secure authentication using **NextAuth.js**
+- Session management via JWT or database (MongoDB Adapter)
+- Email and password-based login support (OAuth-ready)
 
-Track total support, recent transactions, and earnings overview
+### 💼 Creator Dashboard
+- Personalized profile with name, image, bio, and social links
+- Display public support page with donation message and form
+- Update Razorpay API credentials directly from dashboard
+- View donation stats and earnings history
 
-Manage and update Razorpay API credentials for personalized payouts
+### 💳 Payment Integration
+- Seamless integration with **Razorpay** payment gateway
+- Each creator uses their own Razorpay API keys for direct support
+- Real-time transaction status and updates
+- Custom amount support with optional support message
 
-💳 Payment Integration
-Seamless and secure one-time payments via Razorpay
+### 🌐 Public Support Pages
+- Each creator has a unique public page (`/username`)
+- Visitors can send sips with optional notes of encouragement
+- Friendly and simple UX for non-technical supporters
 
-Dynamic key-based transactions: each creator uses their own Razorpay credentials
+### 🔒 Backend & Database
+- API routes for securely handling Razorpay requests
+- Creator and supporter data stored in MongoDB
+- Mongoose used for schema definitions and validations
+- Environment-based Razorpay config for flexible testing and deployment
 
-Real-time success/failure status and transaction logging
+---
 
-🎁 Support Flow
-Anyone can visit a creator’s public page and send a “sip”
+## 🛠️ Tech Stack
 
-Option to leave a message of encouragement with their support
+- **Frontend**: Next.js (React), Tailwind CSS
+- **Backend/API**: Next.js API Routes
+- **Authentication**: NextAuth.js with MongoDB Adapter
+- **Database**: MongoDB with Mongoose
+- **Payments**: Razorpay SDK & Checkout
+- **State Management**: React Context + Hooks
+- **Deployment**: Vercel (or any Node-compatible host)
 
-Instant confirmation and thank-you messages
+---
 
-⚙️ Backend Functionality
-Built with Next.js API Routes acting as the backend
+## 🚀 Getting Started
 
-Uses MongoDB with Mongoose for flexible data storage
+### 1. Clone the Repository
 
-Razorpay SDK integration for secure server-side processing
-
-Input validation and protected routes for sensitive operations
-
-🧰 Tech Stack
-Frontend: Next.js (React), Tailwind CSS
-
-Backend/API: Next.js API Routes, Razorpay SDK
-
-Authentication: NextAuth.js (with MongoDB adapter)
-
-Database: MongoDB (via Mongoose)
-
-Payment Gateway: Razorpay
-
-State Management: React Context + Hooks
-
-🔮 Future Enhancements
-Add recurring monthly subscriptions for supporters
-
-Email notifications for successful support
-
-Creator analytics: revenue trends, support stats, etc.
-
-Admin dashboard for platform-wide insights
-
-Mobile-first UI improvements and PWA support
-
-🤝 Contributing
-Contributions are welcome and appreciated!
-
-Fork the repository
-
-Create a new feature branch: git checkout -b feature/your-feature
-
-Make your changes and commit: git commit -m "Add new feature"
-
-Push to GitHub: git push origin feature/your-feature
-
-Open a Pull Request
+```bash
+git clone https://github.com/rajbandgar/Sips-and-Support.git
+cd Sips-and-Support
